@@ -20,6 +20,9 @@ Create and activate a virtual environment:
 # Create virtual environment
 python -m venv venv
 
+# Activate (Windows)
+venv\Scripts\activate
+
 ### 3. Install Required Packages
 
 Install all the necessary Python packages:
