@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+openpyxl
+PyPDF2
+google-generativeai
+python-dotenv
+numpy
+python-dateutil
