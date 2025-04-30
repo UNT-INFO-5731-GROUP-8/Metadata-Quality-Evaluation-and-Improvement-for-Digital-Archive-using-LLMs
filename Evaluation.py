@@ -3,9 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# -------- USER CONFIGURATION --------
-RAW_FILE = "Raw Evaluation.csv"
-LLM_FILE = "LLM Validated.csv"
+# -------- USER CONFIGURATION -------- 
+RAW_FILE = " "# File location 
+LLM_FILE = " "# File location
 OUTPUT_IMAGE = "metadata_comparison_llm_vs_raw.png"
 
 # -------- SCORE FIELDS TO COMPARE --------
@@ -50,7 +50,7 @@ def main():
 
     # Save the plot
     plt.savefig(OUTPUT_IMAGE)
-    print(f"✅ Chart saved as '{OUTPUT_IMAGE}' in the current folder.")
+    print(f"Chart saved as '{OUTPUT_IMAGE}' in the current folder.")
 
 if __name__ == "__main__":
     main()
