@@ -20,7 +20,7 @@ Create and activate a virtual environment:
 # Create virtual environment
 python -m venv venv
 
-# Activate (Windows)
+# Activate
 venv\Scripts\activate
 
 ### 3. Install Required Packages
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 - Go to [Google AI Studio](https://makersuite.google.com/app/apikey).
 - Generate an API key.
-- Create a `.env` file in the project root and add the key like this:
+- Update '.env' file with generated key like this:
 
 ```env
 GOOGLE_API_KEY=your_api_key_here
@@ -58,34 +58,5 @@ http://127.0.0.1:8000
 ```
 
 From there, you can access the **Metadata Quality Suite** to generate and validate metadata.
-
----
-
-## 📁 Project Structure
-
-```
-final_code/
-│
-├── main.py
-├── requirements.txt
-├── .env
-├── static/
-│   ├── style.css
-│   └── app.js
-├── templates/
-│   └── index.html
-├── generator.py
-└── validator.py
-
-```
-
----
-
-## 🛠 Features
-
-- Upload Excel templates and PDFs to generate metadata.
-- Upload metadata files to validate data quality.
-- Visualize scores with charts.
-- Google AI integration for smart metadata extraction.
 
 ---
