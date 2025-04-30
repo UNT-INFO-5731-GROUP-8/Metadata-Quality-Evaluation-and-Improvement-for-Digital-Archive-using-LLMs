@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metadata Manager Pro</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Metadata Quality Suite</h1>
+        
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'generate')">Generate Metadata</button>
+            <button class="tablink" onclick="openTab(event, 'validate')">Validate Metadata</button>
+        </div>
+
+        <!-- Generation Tab -->
+        <div id="generate" class="tabcontent" style="display: block;">
+            <h2>📄 Generate Metadata</h2>
+            <form id="generateForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="file-upload">
+                        <input type="file" name="input_file" accept=".xlsx" required>
+                        <span class="upload-label">Upload Excel Template</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-generate">✨ Generate Metadata</button>
+            </form>
+            <div id="generateResults" class="results">
+                <div class="loader hidden"></div>
+                <div class="result-table hidden"></div>
+                <div class="error-message hidden"></div>
+            </div>
+        </div>
+
+        <!-- Validation Tab -->
+        <div id="validate" class="tabcontent" style="display: none;">
+            <h2>✅ Validate Metadata</h2>
+            <form id="validateForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="file-upload">
+                        <input type="file" name="metadata_file" accept=".xlsx" required>
+                        <span class="upload-label">Upload Metadata File</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-validate">🔍 Validate Metadata</button>
+            </form>
+            
+            <div id="validateResults" class="results">
+                <div class="loader hidden"></div>
+                <div class="chart-container hidden">
+                    <div class="chart-grid">
+                        <div class="chart-item">
+                            <h4>Detailed Scores</h4>
+                            <canvas id="scoreChart"></canvas>
+                        </div>
+                        <div class="chart-item">
+                            <h4>Overall Score</h4>
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="score-summary hidden">
+                    <h3>Overall Quality Score: <span id="overallScore">-</span>/10</h3>
+                    <div class="score-details"></div>
+                </div>
+                <div class="error-message hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
