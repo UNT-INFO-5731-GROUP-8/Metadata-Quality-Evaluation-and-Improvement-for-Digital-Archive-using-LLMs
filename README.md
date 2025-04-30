@@ -2,7 +2,7 @@
 
 A web application to generate and validate metadata from PDF files using Excel templates.
 
-## 📦 Getting Started
+## Getting Started
 
 ### 1. Extract the Project
 
@@ -19,13 +19,6 @@ Create and activate a virtual environment:
 ```bash
 # Create virtual environment
 python -m venv venv
-
-# Activate (Windows)
-venv\Scripts\activate
-
-# Activate (macOS/Linux)
-source venv/bin/activate
-```
 
 ### 3. Install Required Packages
 
